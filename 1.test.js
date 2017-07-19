@@ -11,3 +11,11 @@ it('subtracts', () => {
 it('multiplies', () => {
   expect(Vector([1, 2, 3]).times(2).val).toEqual([2, 4, 6]);
 });
+
+it('calculates magnitude', () => {
+  expect(Vector([-1, 1, 1]).magnitude()).toBeCloseTo(Math.sqrt(3));
+});
+
+it('calculates unit vector', () => {
+  expect(Vector.unitVector(Vector([-1, 1, 1])).magnitude()).toBe(1);
+});
